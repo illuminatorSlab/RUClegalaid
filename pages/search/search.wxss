@@ -1,0 +1,70 @@
+/**index.wxss**/
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.header .title {
+  font-weight: 700;
+  font-size: 1.9em;
+  margin-bottom: .5em;
+}
+
+.header .text {
+  font-weight: 500;
+  font-size: .8em;
+  color: #aaa;
+}
+
+.section.input {
+  border: 1px solid #ccc;
+  margin: auto 2em;
+  padding:4px;
+  border-radius: 13px!important;
+}
+
+.section {
+  margin: 1em auto;
+}
+
+.laws {
+  margin: 0 1.3em;
+}
+
+.laws .title{
+  text-align: center;
+  border-top:solid 2px rgb(141, 173, 170);
+  border-bottom:solid 2px rgb(141, 173, 170);
+  padding: .3em;
+  font-size: .9em;
+  font-weight: bold;
+}
+
+.laws .article{
+  background-color: rgba(33,150,243,.07);
+  margin: 0.5em auto;
+  padding: 0.3em 0 0.3em 1em;
+  border-left: 6px solid #2196F3;
+  color: #333;
+  font-size: .7em;
+}
+
+.laws .article .label{
+  font-weight: 500;
+}
+
+.laws .article .text{
+  margin-left: 1em;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}

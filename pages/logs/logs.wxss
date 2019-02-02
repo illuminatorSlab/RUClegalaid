@@ -1,0 +1,30 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 37rpx;
+}
+
+.log-list .title{
+  margin: 1.3em auto;
+  padding: 0.2em 0;
+  border-bottom: 2px solid #890604;
+}
+
+.log-item {
+  margin: 20rpx;
+  font-size: .85em;
+}
+
+.log-item .log-date{
+  font-weight: 500;
+}
+
+.log-item .log-text{
+  font-size: .8em;
+}
+
+.credit{
+  margin-top: -1em;
+  color: #2196F3;
+  font-size: .73em;
+}

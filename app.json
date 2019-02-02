@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/search/search",
+    "pages/law/law"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#890604",
+    "navigationBarTitleText": "明法手册",
+    "navigationBarTextStyle": "light"
+  },
+  "tabBar": {
+    "backgroundColor": "#233",
+    "color": "#FFF",
+    "selectedColor": "#1aad19",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "关于"
+      }
+    ]
+  }
+}
