@@ -1,21 +1,27 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="container">
-  <view class="header">
-    <view class="title">{{catTitle}}</view>
-    <view class="text">请输入关键词搜索，点击条文可以查看该法律全文</view>
-  </view>
-  <view class="section input">
-    <input placeholder="多个搜索词用空格隔开" auto-focus confirm-type="search" bindconfirm="search" bindblur="search" value="{{search_str}}"/>
-  </view>
-  <view class="laws">
-    <view class="section" wx:for="{{laws}}" wx:for-index="name" wx:for-item="law">
-      <view class="title" bindtap="goToLawPage" data-name="{{name}}">{{law.title}}</view>
-      <view wx:for="{{law.content}}" wx:key="index">
-        <view class="article" bindtap="goToLawPage" data-name="{{name}}" data-index="{{item.index}}">
-          <text class="label">{{item.label}}</text>
-          <text class="text">{{item.text}}</text>
-        </view>
-      </view>
+    <view class="header">
+        <view class="title">{{catTitle}}</view>
+        <view class="text">请输入关键词搜索，点击条文可以查看该法律全文</view>
     </view>
-  </view>
+    <view class="section input">
+        <input placeholder="多个搜索词用空格隔开" auto-focus confirm-type="search" bindconfirm="search" bindblur="search" value="{{search_str}}" />
+    </view>
+    <view class="laws">
+        <view
+            class="section"
+            wx:for="{{laws}}"
+            wx:for-index="name"
+            wx:for-item="law"
+            wx:key="`wx-key-law-${name}`"
+        >
+            <view class="title" bindtap="goToLawPage" data-name="{{name}}">{{law.title}}</view>
+            <view wx:for="{{law.content}}" wx:key="wx-key-law-${name}-${item.label}">
+                <view class="article" bindtap="goToLawPage" data-name="{{name}}" data-index="{{item.index}}">
+                    <text class="label">{{item.label}}</text>
+                    <text class="text">{{item.text}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
 </view>

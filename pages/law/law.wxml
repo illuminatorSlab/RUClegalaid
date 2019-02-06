@@ -5,7 +5,7 @@
     <text selectable="true">{{info.info}}</text>
   </view>
 </view>
-<scroll-view style="height:{{systemInfo.windowHeight*0.75}}px;" scroll-into-view="view-{{index}}" scroll-y="true" scroll-with-animation="true">
+<scroll-view style="height: 80vh" scroll-into-view="view-{{index}}" scroll-y="true" scroll-with-animation="true">
   <view wx:for="{{law}}" wx:key="label" wx:for-index="i">
     <view class="{{item.level}}" id="view-{{i}}">
     <text class="label" selectable="true">{{item.label}}</text>

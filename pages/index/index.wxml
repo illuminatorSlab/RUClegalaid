@@ -1,15 +1,26 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="container">
-  <view class="header">
-    <view class="title">法律速查</view>
-    <view class="text">请点击下列分类以进入搜索页面</view>
-  </view>
-  <view class="laws">
-    <view class="cat" wx:for="{{lawsInfo}}" wx:for-index="i" wx:for-item="info" bindtap="goToSearchPage" data-cat="{{i}}">
-      <view class="cat-title">{{info.title}}</view>
-      <view class="cat-law" wx:for="{{info.laws}}" wx:for-item="law">
-          <text>{{law}}</text>
-      </view>
+    <view class="header">
+        <view class="title">法律速查</view>
+        <view class="text">请点击下列分类以进入搜索页面</view>
     </view>
-  </view>
+    <view class="laws">
+        <view class="cat"
+            wx:for="{{lawsInfo}}"
+            wx:for-index="i"
+            wx:key="info.title"
+            wx:for-item="info"
+            bindtap="goToSearchPage"
+            data-cat="{{i}}"
+        >
+            <view class="cat-title">{{info.title}}</view>
+            <view class="cat-law"
+                wx:for="{{info.laws}}"
+                wx:for-item="law"
+                wx:key="law"
+            >
+                <text>{{law}}</text>
+            </view>
+        </view>
+    </view>
 </view>
