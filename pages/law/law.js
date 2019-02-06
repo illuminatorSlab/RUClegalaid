@@ -18,19 +18,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 获取窗口高度(scroll-into-view需要)
-    var that = this
-    wx.getSystemInfo({
-      success: function (res) {
-        that.setData({
-          systemInfo: res
-        })
-        that.update()
-      }
-    })
-
     // 设置页面数据
-    
     // console.log(util.getCurrentPageUrlWithArgs());
     var cat = options.cat
     var name = options.name
