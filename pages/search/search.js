@@ -39,7 +39,7 @@ Page({
       cat: options.cat,
       catTitle: this.law_JS.getLawsTitle(options.cat),
       laws: this.law_JS.searchLaw(options.cat, search),
-      search_str: options.search_str
+      search_str: options.search_str || ""
     })
   },
   /**
