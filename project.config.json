@@ -25,7 +25,7 @@
 			},
 			{
 				"type": "file",
-				"value": "eslintrc.js"
+				"value": ".eslintrc.js"
 			}
 		]
 	},
