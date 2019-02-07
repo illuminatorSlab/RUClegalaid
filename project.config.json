@@ -10,7 +10,7 @@
 		"nodeModules": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.6.0",
+	"libVersion": "1.9.0",
 	"appid": "wx01407bd0c112cad0",
 	"projectname": "%E6%B3%95%E5%BE%8B%E9%80%9F%E6%9F%A5",
 	"packOptions": {

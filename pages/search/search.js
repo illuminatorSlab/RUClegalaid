@@ -10,8 +10,26 @@ Page({
         laws: null,
         search_str: '',
     },
-    getSearchLawsResult: function (cat, search_str) {
+    emptyResultToast: function (result) {
+        var noResult = true;
+        for (var lawKey in result) {
+            if (result[lawKey].content && result[lawKey].content.length > 0) {
+                noResult = false;
+                break;
+            }
+        }
+        if (noResult) {
+            wx.showToast({
+                title: '未找到相关条目',
+                icon: 'none'
+            });
+        }
+    },
+    getSearchLawsResult: function (cat, search_str, showEmptyToast = false) {
         var result = this.law_JS.searchLaw(cat, search_str);
+        if (search_str && showEmptyToast) {
+            this.emptyResultToast(result);
+        }
         return result;
     },
     search: function (e) {
@@ -19,7 +37,7 @@ Page({
 
         this.setData({
             search_str: str,
-            laws: this.getSearchLawsResult(this.data.cat, str)
+            laws: this.getSearchLawsResult(this.data.cat, str, true)
         });
     },
     goToLawPage: function (e) {
