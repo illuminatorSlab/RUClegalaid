@@ -10,24 +10,33 @@ Page({
         cat: null,
         name: '',
         index: '',
-        info: new Object(),
-        systemInfo: new Object()
+        info: new Object()
     },
-
+    syncIndex(index) {
+        this.setData({
+            index: index
+        });
+        this.options.index = index;
+    },
+    onLawTap: function (e) {
+        var index = e.target.dataset.index;
+        if (index) {
+            this.syncIndex(index);
+        }
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
         // 设置页面数据
         // console.log(util.getCurrentPageUrlWithArgs());
-        var cat = options.cat;
-        var name = options.name;
         var path = app.globalData.lawsPath;
         var law_JS = require(path);
+        var { cat, name, index } = options;
         this.setData({
             cat: cat,
             name: name,
-            index: options.index,
+            index: index,
             info: law_JS.getLawInfo(cat, name),
             law: law_JS.getLawContent(cat, name)
         });
@@ -49,16 +58,14 @@ Page({
                 // 转发成功
                 wx.showToast({
                     title: '转发成功',
-                    icon: 'success',
-                    duration: 2000
+                    icon: 'success'
                 });
             },
             fail: function (res) {
                 // 转发失败
                 wx.showToast({
                     title: '转发失败',
-                    icon: 'cancel',
-                    duration: 2000
+                    icon: 'none'
                 });
             }
         };

@@ -6,12 +6,22 @@
         <text selectable="true">{{info.info}}</text>
     </view>
     </view>
-    <scroll-view scroll-into-view="view-{{index}}" scroll-y="true" scroll-with-animation="true">
-    <view wx:for="{{law}}" wx:key="label" wx:for-index="i">
-        <view class="{{item.level}}" id="view-{{i}}">
-        <text class="label" selectable="true" wx:if="{{item.label}}">{{item.label}}</text>
-        <text class="text" selectable="true">{{item.text}}</text>
+    <scroll-view
+        scroll-into-view="view-{{index}}"
+        scroll-y="true"
+        scroll-with-animation="true"
+        bindtap="onLawTap"
+    >
+        <view
+            wx:for="{{law}}"
+            wx:key="label"
+            wx:for-index="i"
+            class="{{item.level}}"
+            id="view-{{i}}"
+            data-index="{{i}}"
+        >
+            <text class="label" selectable="true" wx:if="{{item.label}}" data-index="{{i}}">{{item.label}}</text>
+            <text class="text" selectable="true" data-index="{{i}}">{{item.text}}</text>
         </view>
-    </view>
     </scroll-view>
 </view>
