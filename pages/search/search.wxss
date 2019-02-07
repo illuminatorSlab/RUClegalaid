@@ -9,7 +9,6 @@
 .header .title {
     font-weight: 700;
     font-size: 1.9em;
-    margin-bottom: .5em;
 }
 
 .header .text {
@@ -20,9 +19,11 @@
 
 .section.input {
     border: 1px solid #ccc;
-    margin: auto 2em;
+    margin: auto 1em;
     padding: 4px;
-    border-radius: 13px !important;
+    border-radius: 7px !important;
+    font-size: 14px;
+    width:80%;
 }
 
 .section {
@@ -30,13 +31,14 @@
 }
 
 .laws {
-    margin: 0 1.3em;
+    margin: 0;
+    width: 100%;
 }
 
 .laws .title {
-    text-align: center;
-    border-top: solid 2px rgb(141, 173, 170);
-    border-bottom: solid 2px rgb(141, 173, 170);
+    text-align: left;
+    border-top: solid 2px #2196F3;
+    border-bottom: dashed 1px #2196F3;
     padding: .3em;
     font-size: .9em;
     font-weight: bold;
@@ -44,7 +46,7 @@
 
 .laws .article {
     background-color: rgba(33, 150, 243, .07);
-    margin: 0.5em auto;
+    margin-bottom: 0.5em;
     padding: 0.3em 0 0.3em 1em;
     border-left: 6px solid #2196F3;
     color: #333;

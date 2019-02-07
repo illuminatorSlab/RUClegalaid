@@ -19,10 +19,11 @@
 }
 
 scroll-view {
-    border: 1px solid #ccc !important;
-    padding: 8px;
-    border-radius: 16px !important;
-    margin: auto 1em;
+    height: 90vh;
+    border: 1px solid #cccccc !important;
+    padding: 1px 5px;
+    border-radius: 6px !important;
+    margin: 1em 0;
     width: auto;
 }
 
@@ -55,6 +56,6 @@ scroll-view {
     font-weight: bold;
 }
 
-.text {
+.label + .text {
     margin-left: 1em;
 }

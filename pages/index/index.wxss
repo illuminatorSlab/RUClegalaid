@@ -19,11 +19,10 @@
 }
 
 .cat {
-    margin: 1em 2em;
-    padding-bottom: .5em;
+    margin: 1em 0;
     border-width: 1px 1px 1px 5px;
     border-style: solid;
-    border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(204, 204, 204) rgb(141, 173, 170);
+    border-color: #cccccc #cccccc #cccccc #2196F3;
     border-radius: 4px;
 }
 

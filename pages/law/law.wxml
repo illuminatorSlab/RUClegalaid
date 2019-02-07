@@ -1,15 +1,17 @@
 <!-- law.wxml -->
-<view class="info">
-  <view class="title">{{info.title}}</view>
-  <view class="info-text">
-    <text selectable="true">{{info.info}}</text>
-  </view>
-</view>
-<scroll-view style="height: 80vh" scroll-into-view="view-{{index}}" scroll-y="true" scroll-with-animation="true">
-  <view wx:for="{{law}}" wx:key="label" wx:for-index="i">
-    <view class="{{item.level}}" id="view-{{i}}">
-      <text class="label" selectable="true">{{item.label}}</text>
-      <text class="text" selectable="true">{{item.text}}</text>
+<view class="container">
+    <view class="info">
+    <view class="title">{{info.title}}</view>
+    <view class="info-text">
+        <text selectable="true">{{info.info}}</text>
     </view>
-  </view>
-</scroll-view>
+    </view>
+    <scroll-view scroll-into-view="view-{{index}}" scroll-y="true" scroll-with-animation="true">
+    <view wx:for="{{law}}" wx:key="label" wx:for-index="i">
+        <view class="{{item.level}}" id="view-{{i}}">
+        <text class="label" selectable="true" wx:if="{{item.label}}">{{item.label}}</text>
+        <text class="text" selectable="true">{{item.text}}</text>
+        </view>
+    </view>
+    </scroll-view>
+</view>
