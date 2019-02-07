@@ -5,7 +5,9 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false,
+		"nodeModules": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.6.0",
@@ -16,6 +18,14 @@
 			{
 				"type": "folder",
 				"value": ".vscode"
+			},
+			{
+				"type": "file",
+				"value": "package.json"
+			},
+			{
+				"type": "file",
+				"value": "eslintrc.js"
 			}
 		]
 	},

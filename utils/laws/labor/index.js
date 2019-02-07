@@ -11,7 +11,7 @@ const LaborDisputeCasesInterpretationIII = require('./labor-dispute-cases-interp
 const LaborDisputeCasesInterpretationIV = require('./labor-dispute-cases-interpretation-iv.js');
 
 module.exports = {
-    "title": "劳动保障",
+    'title': '劳动保障',
     LaborLaw,
     LaborContractLaw2012Amendment,
     LaborContractLawImplementationRegulation,
@@ -23,4 +23,4 @@ module.exports = {
     LaborDisputeCasesInterpretationII,
     LaborDisputeCasesInterpretationIII,
     LaborDisputeCasesInterpretationIV
-}
+};

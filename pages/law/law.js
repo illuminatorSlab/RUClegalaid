@@ -1,15 +1,15 @@
 // law.js
-var util = require('../../utils/util.js')
+var util = require('../../utils/util.js');
 //获取应用实例
-var app = getApp()
+var app = getApp();
 Page({
     /**
      * 页面的初始数据
      */
     data: {
         cat: null,
-        name: "",
-        index: "",
+        name: '',
+        index: '',
         info: new Object(),
         systemInfo: new Object()
     },
@@ -20,10 +20,10 @@ Page({
     onLoad: function (options) {
         // 设置页面数据
         // console.log(util.getCurrentPageUrlWithArgs());
-        var cat = options.cat
-        var name = options.name
-        var path = app.globalData.lawsPath
-        var law_JS = require(path)
+        var cat = options.cat;
+        var name = options.name;
+        var path = app.globalData.lawsPath;
+        var law_JS = require(path);
         this.setData({
             cat: cat,
             name: name,
@@ -34,13 +34,13 @@ Page({
 
         wx.setNavigationBarTitle({
             title: this.data.info.title
-        })
+        });
     },
     /**
      * 用户点击右上角分享
      */
     onShareAppMessage: function (res) {
-        var url = util.getCurrentPageUrlWithArgs() //当前页面url+参数
+        var url = util.getCurrentPageUrlWithArgs(); //当前页面url+参数
 
         return {
             title: this.data.info.title,
@@ -51,7 +51,7 @@ Page({
                     title: '转发成功',
                     icon: 'success',
                     duration: 2000
-                })
+                });
             },
             fail: function (res) {
                 // 转发失败
@@ -59,8 +59,8 @@ Page({
                     title: '转发失败',
                     icon: 'cancel',
                     duration: 2000
-                })
+                });
             }
-        }
+        };
     }
-})
+});

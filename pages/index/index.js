@@ -1,23 +1,23 @@
 //index.js
 //获取应用实例
-var app = getApp()
+var app = getApp();
 Page({
     law_JS: require(app.globalData.lawsPath),
     data: {
         lawsInfo: null
     },
     goToSearchPage: function (e) {
-        var cat = e.currentTarget.dataset.cat
+        var cat = e.currentTarget.dataset.cat;
         // console.log(cat)
         wx.navigateTo({
             url: '../search/search?cat=' + cat
-        })
+        });
     },
     onLoad: function () {
         //console.log('onLoad')
         this.setData({
             lawsInfo: this.law_JS.getLawsInfo()
-        })
+        });
         // console.log(this.data.lawsInfo)
 
         /*
@@ -31,4 +31,4 @@ Page({
         })*/
     },
     onShareAppMessage: app.globalData.forward
-})
+});

@@ -1,12 +1,12 @@
 //app.js
 App({
-  onLaunch: function () {
+    onLaunch: function () {
     //调用API从本地缓存中获取数据
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-  },
-  /*
+        var logs = wx.getStorageSync('logs') || [];
+        logs.unshift(Date.now());
+        wx.setStorageSync('logs', logs);
+    },
+    /*
   getUserInfo:function(cb){
     var that = this
     if(this.globalData.userInfo){
@@ -25,30 +25,30 @@ App({
       })
     }
   }, */
-  globalData:{
-    userInfo: null,
-    lawsPath: "../../utils/laws.js",
-    forward: function (res) {
-      return {
-        title: '法律速查小程序',
-        path: '/pages/index/index',
-        success: function (res) {
-          // 转发成功
-          wx.showToast({
-            title: '转发成功',
-            icon: 'success',
-            duration: 2000
-          })
-        },
-        fail: function (res) {
-          // 转发失败
-          wx.showToast({
-            title: '转发失败',
-            icon: 'loading',
-            duration: 2000
-          })
+    globalData:{
+        userInfo: null,
+        lawsPath: '../../utils/laws.js',
+        forward: function (res) {
+            return {
+                title: '法律速查小程序',
+                path: '/pages/index/index',
+                success: function (res) {
+                    // 转发成功
+                    wx.showToast({
+                        title: '转发成功',
+                        icon: 'success',
+                        duration: 2000
+                    });
+                },
+                fail: function (res) {
+                    // 转发失败
+                    wx.showToast({
+                        title: '转发失败',
+                        icon: 'loading',
+                        duration: 2000
+                    });
+                }
+            };
         }
-      }
     }
-  }
-})
+});

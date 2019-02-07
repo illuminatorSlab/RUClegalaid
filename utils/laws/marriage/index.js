@@ -7,7 +7,7 @@ const MarriageLawInterpretationIII = require('./marriage-law-interpretation-iii.
 const AntiDomesticViolenceLaw = require('./anti-domestic-violence-law.js');
 
 module.exports = {
-    "title": "婚姻继承",
+    'title': '婚姻继承',
     MarriageLaw,
     SuccessionLaw,
     MarriageLawInterpretationI,
