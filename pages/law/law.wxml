@@ -1,10 +1,15 @@
 <!-- law.wxml -->
 <view class="container">
     <view class="info">
-    <view class="title">{{info.title}}</view>
-    <view class="info-text">
-        <text selectable="true">{{info.info}}</text>
-    </view>
+        <view class="title">
+            {{info.title}}
+        </view>
+        <view 
+            class="{{showInfoText ? 'info-text' : 'info-text brief'}}"
+            bindtap="toggleInfoText"
+        >
+            <text selectable="true">{{info.info}}</text>
+        </view>
     </view>
     <scroll-view
         scroll-into-view="view-{{index}}"

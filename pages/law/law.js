@@ -10,7 +10,14 @@ Page({
         cat: null,
         name: '',
         index: '',
-        info: new Object()
+        info: {},
+        showInfoText: false
+    },
+    toggleInfoText: function () {
+        var _this = this;
+        this.setData({
+            showInfoText: !_this.data.showInfoText
+        });
     },
     syncIndex(index) {
         this.setData({
