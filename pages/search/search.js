@@ -73,16 +73,14 @@ Page({
                 // 转发成功
                 wx.showToast({
                     title: '转发成功',
-                    icon: 'success',
-                    duration: 2000
+                    icon: 'success'
                 });
             },
             fail: function (res) {
                 // 转发失败
                 wx.showToast({
                     title: '转发失败',
-                    icon: 'cancel',
-                    duration: 2000
+                    icon: 'none'
                 });
             }
         };
