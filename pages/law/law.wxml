@@ -12,6 +12,7 @@
         </view>
     </view>
     <scroll-view
+        class="main"
         scroll-into-view="view-{{index}}"
         scroll-y="true"
         scroll-with-animation="true"
@@ -19,9 +20,9 @@
     >
         <view
             wx:for="{{law}}"
-            wx:key="label"
+            wx:key="{{info.title + item.label}}"
             wx:for-index="i"
-            class="{{item.level}}"
+            class="{{item.level + (index == i ? ' current' : '')}}"
             id="view-{{i}}"
             data-index="{{i}}"
         >
