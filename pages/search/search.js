@@ -8,7 +8,7 @@ Page({
         cat: null,
         catTitle: '',
         laws: null,
-        search_str: '',
+        searchStr: '',
     },
     emptyResultToast: function (result) {
         var noResult = true;
@@ -25,20 +25,26 @@ Page({
             });
         }
     },
-    getSearchLawsResult: function (cat, search_str, showEmptyToast = false) {
-        var result = this.law_JS.searchLaw(cat, search_str);
-        if (search_str && showEmptyToast) {
+    getSearchLawsResult: function (searchStr, showEmptyToast = false) {
+        var result = this.law_JS.searchLaw(this.data.cat, searchStr);
+        if (searchStr && showEmptyToast) {
             this.emptyResultToast(result);
         }
         return result;
     },
-    search: function (e) {
-        var str = e.detail.value || '';
-
+    clearSearch: function() {
+        this.search();
+    },
+    search: function (searchStr = '', showEmptyToast = false) {
+        var laws = this.getSearchLawsResult(searchStr, showEmptyToast);
         this.setData({
-            search_str: str,
-            laws: this.getSearchLawsResult(this.data.cat, str, true)
+            searchStr,
+            laws
         });
+    },
+    onSearchStrChange: function (e) {
+        var searchStr = e.detail.value || '';
+        this.search(searchStr, true);
     },
     goToLawPage: function (e) {
         var cat = this.data.cat;
@@ -49,21 +55,21 @@ Page({
         });
     },
     onLoad: function (options) {
-        var search = options.search_str || '';
+        // 同步数据
         this.setData({
             cat: options.cat,
-            catTitle: this.law_JS.getLawsTitle(options.cat),
-            laws: this.getSearchLawsResult(options.cat, search),
-            search_str: options.search_str || ''
+            catTitle: this.law_JS.getLawsTitle(options.cat)
         });
+
+        this.search(options.searchStr || '');
     },
     /**
      * 用户点击右上角分享
      */
     onShareAppMessage: function (res) {
         var url = util.getCurrentPageUrlWithArgs(); //当前页面url+参数
-        if (this.data.search_str.length > 0) {
-            url += '&search_str=' + this.data.search_str; //搜索参数
+        if (this.data.searchStr.length > 0) {
+            url += '&searchStr=' + this.data.searchStr; //搜索参数
         }
 
         return {

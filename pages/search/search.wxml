@@ -4,8 +4,15 @@
         <view class="title">{{catTitle}}</view>
         <view class="text">请输入关键词搜索，点击条文可以查看该法律全文</view>
     </view>
-    <view class="section input">
-        <input placeholder="多个搜索词用空格隔开" auto-focus confirm-type="search" bindconfirm="search" bindblur="search" value="{{search_str}}" />
+    <view class="search-input">
+        <input 
+            placeholder="多个搜索词用空格隔开"
+            confirm-type="search"
+            bindconfirm="onSearchStrChange" 
+            bindblur="onSearchStrChange" 
+            value="{{searchStr}}"
+        />
+        <icon wx:if="{{searchStr}}" type="clear" size="20" bindtap="clearSearch" />
     </view>
     <view class="laws">
         <view

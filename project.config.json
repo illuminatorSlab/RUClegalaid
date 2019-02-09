@@ -45,7 +45,7 @@
 					"id": -1,
 					"name": "search",
 					"pathName": "pages/search/search",
-					"query": "cat=0&search_str=工伤 赔偿"
+					"query": "cat=0&searchStr=工伤 赔偿"
 				}
 			]
 		}
