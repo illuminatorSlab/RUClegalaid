@@ -2,6 +2,9 @@
 var util = require('../../utils/util.js');
 //获取应用实例
 var app = getApp();
+// 转发标题
+const shareTitleSuffix = ' - 明法手册';
+
 Page({
     /**
      * 页面的初始数据
@@ -14,9 +17,8 @@ Page({
         showInfoText: false
     },
     toggleInfoText: function () {
-        var _this = this;
         this.setData({
-            showInfoText: !_this.data.showInfoText
+            showInfoText: !this.data.showInfoText
         });
     },
     syncIndex(index) {
@@ -36,7 +38,6 @@ Page({
      */
     onLoad: function (options) {
         // 设置页面数据
-        // console.log(util.getCurrentPageUrlWithArgs());
         var path = app.globalData.lawsPath;
         var law_JS = require(path);
         var { cat, name, index } = options;
@@ -48,9 +49,9 @@ Page({
             law: law_JS.getLawContent(cat, name)
         });
 
-        wx.setNavigationBarTitle({
+        /* wx.setNavigationBarTitle({
             title: this.data.info.title
-        });
+        }); */
     },
     /**
      * 用户点击右上角分享
@@ -59,7 +60,7 @@ Page({
         var url = util.getCurrentPageUrlWithArgs(); //当前页面url+参数
 
         return {
-            title: this.data.info.title,
+            title: this.data.info.title + shareTitleSuffix,
             path: url,
             success: function (res) {
                 // 转发成功
