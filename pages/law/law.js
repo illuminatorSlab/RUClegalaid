@@ -33,9 +33,6 @@ Page({
             this.syncIndex(index);
         }
     },
-    /**
-     * 生命周期函数--监听页面加载
-     */
     onLoad: function (options) {
         // 设置页面数据
         var path = app.globalData.lawsPath;
@@ -48,7 +45,8 @@ Page({
             info: law_JS.getLawInfo(cat, name),
             law: law_JS.getLawContent(cat, name)
         });
-
+    },
+    onReady: function() {
         /* wx.setNavigationBarTitle({
             title: this.data.info.title
         }); */
