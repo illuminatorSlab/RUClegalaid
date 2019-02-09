@@ -4,6 +4,7 @@ var app = getApp();
 Page({
     law_JS: require(app.globalData.lawsPath),
     data: {
+        expandCat: [],
         lawsInfo: null
     },
     goToSearchPage: function (e) {
@@ -11,6 +12,14 @@ Page({
         // console.log(cat)
         wx.navigateTo({
             url: '../search/search?cat=' + cat
+        });
+    },
+    expandCatTap: function (e) {
+        var newExpandCat = this.data.expandCat;
+        var catIndex = e.target.dataset.catIndex;
+        newExpandCat[catIndex] = !newExpandCat[catIndex];
+        this.setData({
+            expandCat: newExpandCat
         });
     },
     onLoad: function () {
