@@ -2,6 +2,7 @@
 // var util = require('../../utils/util.js')
 Page({
     data: {
+        canUseOfficialAccount: wx.canIUse('official-account'),
         logs: [{
             date: '2019.02',
             text: '\n优化操作及界面样式'
