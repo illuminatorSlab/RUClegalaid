@@ -3,7 +3,7 @@ const CompulsoryAutoLiabilityInsuranceRegulation = require('./compulsory-auto-li
 const RoadTrafficAccidentsCompensationInterpretation = require('./road-traffic-accidents-compensation-interpretation.js');
 
 module.exports = {
-    "title": "道路交通",
+    'title': '道路交通',
     RoadTrafficSafetyLaw,
     CompulsoryAutoLiabilityInsuranceRegulation,
     RoadTrafficAccidentsCompensationInterpretation

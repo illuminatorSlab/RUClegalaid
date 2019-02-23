@@ -4,7 +4,7 @@ const CivilProcedureLawInterpretationTrialSupervisionProcedure = require('./civi
 const AdministrativeLitigationLaw = require('./administrative-litigation-law.js');
 
 module.exports = {
-    "title": "诉讼程序",
+    'title': '诉讼程序',
     CivilProcedureLaw2017Revision,
     CivilProcedureLawInterpretation,
     CivilProcedureLawInterpretationTrialSupervisionProcedure,

@@ -1,59 +1,80 @@
 /* law.wxss */
-.info{
-  text-align: center;
+.container {
+    height: 100vh;
+}
+
+.info {
+    text-align: center;
+    width: 100%;
 }
 
 .title {
-  font-size: 1.3em;
-  font-weight: 700;
-  color: #000;
-  margin-top: 1em;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #000;
 }
 
 .info-text {
-  font-size: .7em;
-  font-weight: normal;
-  color: #999;
-  margin: 1.3em 2.5em;
-  line-height: 1.3;
+    font-size: .7em;
+    font-weight: normal;
+    color: #999;
+    margin: 0.5em 1em;
+    line-height: 1.3;
 }
 
-scroll-view {
-  border: 1px solid #ccc!important;
-  padding: 8px;
-  border-radius: 16px!important;
-  margin: auto 1em;
-  width: auto;
+.info-text.brief {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
-.chapter,.part {
-  text-align: center;
-  font-size: 1.1em;
-  font-weight: bolder;
-  color: #111;
-  margin: 1.3em auto;
+.main {
+    display: flex;
+    flex: 1;
+    border: 1px solid #ccc !important;
+    padding: 1px 5px;
+    border-radius: 6px !important;
+    margin: 5px 0;
+    width: auto;
+}
+
+.main .current {
+    background-color: rgba(33, 150, 243, 0.07);
+}
+
+.chapter,
+.part {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bolder;
+    color: #111;
+    margin: 1.3em auto;
 }
 
 .section {
-  text-align: center;
-  font-size: 1em;
-  font-weight: bold;
-  color: #222;
-  margin: 1em auto;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: #222;
+    margin: 1em auto;
 }
 
 .article {
-  align-items: left;
-  font-size: .8em;
-  color: #333;
-  margin: .7em auto;
-  line-height: 1.5;
+    align-items: left;
+    font-size: .8em;
+    color: #333;
+    margin: .7em auto;
+    line-height: 1.5;
 }
 
 .article .label {
-  font-weight: bold;
+    font-weight: bold;
 }
 
-.text {
-  margin-left: 1em;
+.label + .text {
+    margin-left: 1em;
 }

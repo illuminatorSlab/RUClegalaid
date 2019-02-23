@@ -1,15 +1,33 @@
-<!--law.wxml-->
-<view class="info">
-  <view class="title">{{info.title}}</view>
-  <view class="info-text">
-    <text selectable="true">{{info.info}}</text>
-  </view>
-</view>
-<scroll-view style="height:{{systemInfo.windowHeight*0.75}}px;" scroll-into-view="view-{{index}}" scroll-y="true" scroll-with-animation="true">
-  <view wx:for="{{law}}" wx:key="label" wx:for-index="i">
-    <view class="{{item.level}}" id="view-{{i}}">
-    <text class="label" selectable="true">{{item.label}}</text>
-    <text class="text" selectable="true">{{item.text}}</text>
+<!-- law.wxml -->
+<view class="container">
+    <view class="info">
+        <view class="title">
+            {{info.title}}
+        </view>
+        <view 
+            class="{{showInfoText ? 'info-text' : 'info-text brief'}}"
+            bindtap="toggleInfoText"
+        >
+            <text selectable="true">{{info.info}}</text>
+        </view>
     </view>
-  </view>
-</scroll-view>
+    <scroll-view
+        class="main"
+        scroll-into-view="view-{{index}}"
+        scroll-y="true"
+        scroll-with-animation="true"
+        bindtap="onLawTap"
+    >
+        <view
+            wx:for="{{law}}"
+            wx:key="{{info.title + item.label}}"
+            wx:for-index="i"
+            class="{{item.level + (index == i ? ' current' : '')}}"
+            id="view-{{i}}"
+            data-index="{{i}}"
+        >
+            <text class="label" selectable="true" wx:if="{{item.label}}" data-index="{{i}}">{{item.label}}</text>
+            <text class="text" selectable="true" data-index="{{i}}">{{item.text}}</text>
+        </view>
+    </scroll-view>
+</view>

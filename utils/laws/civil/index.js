@@ -10,7 +10,7 @@ const GuaranteeLaw = require('./guarantee-law.js');
 const ProvisionsPrivateLendingCases = require('./provisions-private-lending-cases.js');
 
 module.exports = {
-    "title": "民生民权",
+    'title': '民生民权',
     CivilLawProvisions,
     CivilLawPrinciples,
     ContractLaw,
@@ -21,4 +21,4 @@ module.exports = {
     PropertyLawInterpretationI,
     GuaranteeLaw,
     ProvisionsPrivateLendingCases
-}
+};

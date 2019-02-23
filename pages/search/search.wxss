@@ -1,70 +1,81 @@
 /**index.wxss**/
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5em;
 }
 
 .header .title {
-  font-weight: 700;
-  font-size: 1.9em;
-  margin-bottom: .5em;
+    font-weight: 700;
+    font-size: 1.9em;
 }
 
 .header .text {
-  font-weight: 500;
-  font-size: .8em;
-  color: #aaa;
+    font-weight: 500;
+    font-size: 0.8em;
+    color: #aaa;
 }
 
-.section.input {
-  border: 1px solid #ccc;
-  margin: auto 2em;
-  padding:4px;
-  border-radius: 13px!important;
+.search-input {
+    width:80%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 4px;
+    border-radius: 7px !important;
+    font-size: 14px;
+}
+
+.search-input input {
+    flex: 1;
+}
+
+.search-input icon {
+    margin: 0 5px;
 }
 
 .section {
-  margin: 1em auto;
+    margin: 1em auto;
 }
 
 .laws {
-  margin: 0 1.3em;
+    margin: 0;
+    width: 100%;
 }
 
-.laws .title{
-  text-align: center;
-  border-top:solid 2px rgb(141, 173, 170);
-  border-bottom:solid 2px rgb(141, 173, 170);
-  padding: .3em;
-  font-size: .9em;
-  font-weight: bold;
+.laws .title {
+    text-align: left;
+    border-top: solid 2px #2196F3;
+    border-bottom: dashed 1px #2196F3;
+    padding: .3em;
+    font-size: .9em;
+    font-weight: bold;
 }
 
-.laws .article{
-  background-color: rgba(33,150,243,.07);
-  margin: 0.5em auto;
-  padding: 0.3em 0 0.3em 1em;
-  border-left: 6px solid #2196F3;
-  color: #333;
-  font-size: .7em;
+.laws .article {
+    background-color: rgba(33, 150, 243, 0.07);
+    margin-bottom: 0.5em;
+    padding: 0.3em 0 0.3em 1em;
+    border-left: 6px solid #2196f3;
+    color: #333;
+    font-size: .7em;
 }
 
-.laws .article .label{
-  font-weight: 500;
+.laws .article .label {
+    font-weight: 500;
 }
 
-.laws .article .text{
-  margin-left: 1em;
+.laws .article .text {
+    margin-left: 1em;
 }
 
 .userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  border-radius: 50%;
+    width: 128rpx;
+    height: 128rpx;
+    border-radius: 50%;
 }
 
 .userinfo-nickname {
-  color: #aaa;
+    color: #aaa;
 }

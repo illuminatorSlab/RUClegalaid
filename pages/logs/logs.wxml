@@ -1,19 +1,15 @@
-<!--logs.wxml-->
+<!-- logs.wxml -->
 <view class="container log-list">
-  <view class="title">更多咨询</view>
-  <text class="credit" >请点击右上角→关于小程序→相关公众号</text>
-  <view class="title">项目出品</view>
-  <text class="credit" selectable="true">中国人民大学法律援助中心</text>
-  <view class="title">技术支持</view>
-  <text class="credit" selectable="true">光語工作室illuminatorStudio</text>
-  <!-- <block wx:for="{{logs}}" wx:for-item="log" wx:key="*this">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block> -->
-  <view class="title">更新日志</view>
-  <view>
-    <view  class="log-item" wx:for="{{logs}}" wx:for-item="log" wx:key="date">
-      <text class="log-date">{{log.date}}：</text>
-      <text class="log-text" selectable="true">{{log.text}}</text>
+    <view class="title">更多咨询</view>
+    <text class="credit">右上省略号 → 关于明法手册 → 相关公众号\n→ 中国人民大学法律援助中心</text>
+    <official-account wx:if="{{canUseOfficialAccount}}" class="legal-aid"></official-account>
+    <view class="title">技术支持</view>
+    <text class="credit" selectable="true">光語工作室illuminatorStudio</text>
+    <view class="title">更新日志</view>
+    <view>
+        <view class="log-item" wx:for="{{logs}}" wx:for-item="log" wx:key="date">
+            <text class="log-date">{{log.date}}：</text>
+            <text class="log-text" selectable="true">{{log.text}}</text>
+        </view>
     </view>
-  </view>
 </view>
