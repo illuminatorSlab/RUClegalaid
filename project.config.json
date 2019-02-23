@@ -26,7 +26,11 @@
 			{
 				"type": "file",
 				"value": ".eslintrc.js"
-			}
+			},
+            {
+                "type": "file",
+                "value": "miniappcode.jpg"
+            }
 		]
 	},
 	"condition": {
