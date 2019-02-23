@@ -29,4 +29,5 @@
 .credit {
     color: #2196F3;
     font-size: 0.73em;
+    text-align: center;
 }
